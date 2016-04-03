@@ -47,5 +47,5 @@ public class WebServiceParking : System.Web.Services.WebService {
     }
 
     //[WebMethod]
-    //public int registerUser()
+    //public int registerUser(string name, string lastname)
 }
