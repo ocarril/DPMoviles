@@ -46,6 +46,31 @@ public class WebServiceParking : System.Web.Services.WebService {
         return json;
     }
 
-    //[WebMethod]
-    //public int registerUser(string name, string lastname)
+    [WebMethod]
+    public string registerUser(string name, string lastname, string email, string password)
+    {
+        var json = string.Empty;
+        JavaScriptSerializer jss = new JavaScriptSerializer();
+        try
+        {
+            ParkingDataClassesDataContext SQLDC = new ParkingDataClassesDataContext();
+            SQLDC.user.InsertOnSubmit(new user
+            {
+                name = name,
+                lastName = lastname,
+                email = email,
+                password = password,
+                registerDate = DateTime.Now,
+            });
+
+            SQLDC.SubmitChanges();
+
+            json = jss.Serialize("OK");
+        }
+        catch (Exception ex)
+        {
+            json = jss.Serialize(ex.Message);
+        }
+        return json;
+    }
 }
