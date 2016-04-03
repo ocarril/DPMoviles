@@ -42,7 +42,7 @@ namespace slnWcfRestServiceParkingTest
         {
             // Prueba de OBTENER un alumno vía HTTP GET
 
-            string strURL = "http://localhost:3643/Users.svc/ValidateUser";
+            string strURL = "http://localhost:3643/Users.svc/validateUser";
             string strmail = "rcarril";
             string strpassword = "1234";
             HttpWebRequest reqObtener = (HttpWebRequest)WebRequest
@@ -62,18 +62,18 @@ namespace slnWcfRestServiceParkingTest
         [TestMethod]
         public void UserCrearTest()
         {
-           User objUser = new User
-            {
-                email = "01prueba@gmail.com",
-                lastName = "GUTIERREZ",
-                name = "Juan",
-                userID = 99,
-                registerDate = DateTime.Now,
-                status = true,
-                password = "1234"
-            };
+            User objUser = new User
+             {
+                 email = "kgutierrez@gmail.com",
+                 lastName = "GUTIERREZ",
+                 name = "Juan",
+                 userID = 99,
+                 registerDate = DateTime.Now,
+                 status = true,
+                 password = "1234"
+             };
             JavaScriptSerializer jsx = new JavaScriptSerializer();
-            string  postdata = jsx.Serialize(objUser);
+            string postdata = jsx.Serialize(objUser);
             byte[] data = Encoding.UTF8.GetBytes(postdata);
 
             HttpWebRequest req = (HttpWebRequest)WebRequest
@@ -93,7 +93,10 @@ namespace slnWcfRestServiceParkingTest
             JavaScriptSerializer js = new JavaScriptSerializer();
             string userCreado = js.Deserialize<string>(userJson);
 
-            Assert.AreEqual("0", userCreado);
+            if (userCreado == "0")
+                Assert.AreEqual("0", userCreado);
+            else if (userCreado == "2")
+                Assert.AreEqual("2", userCreado);
 
         }
     }

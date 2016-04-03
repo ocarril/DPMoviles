@@ -26,7 +26,7 @@ namespace slnWcfRestServiceParking
                 return "Buenos Noches";
         }
 
-        public User ValidateUser(string email, string password)
+        public User validateUser(string email, string password)
         {
             return objUserDAO.ValidateUser(email, password);
         }
@@ -36,7 +36,7 @@ namespace slnWcfRestServiceParking
             return objUserDAO.registerUser(objUser);
         }
 
-        public User FindUser(string userID)
+        public User findUser(string userID)
         {
             return objUserDAO.FindUser(userID);
         }

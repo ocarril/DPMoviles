@@ -30,14 +30,13 @@ namespace slnWcfRestServiceParking
                    UriTemplate = "ValidateUser/{email}/{password}",
                    RequestFormat = WebMessageFormat.Json,
                    ResponseFormat = WebMessageFormat.Json)]
-        User ValidateUser(string email, string password);
-        //
-
+        User validateUser(string email, string password);
+        
         [OperationContract]
         [WebInvoke(Method = "GET",
                    UriTemplate = "Users/{userID}",
                    RequestFormat = WebMessageFormat.Json,
                    ResponseFormat = WebMessageFormat.Json)]
-        User FindUser(string userID);
+        User findUser(string userID);
     }
 }

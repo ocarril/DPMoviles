@@ -2,3 +2,7 @@ F:\CROMSistemas\VS2012\DPMoviles\WCFMovilRest\slnWcfRestServiceParking\slnWcfRes
 F:\CROMSistemas\VS2012\DPMoviles\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\bin\Debug\slnWcfRestServiceParkingTest.pdb
 F:\CROMSistemas\VS2012\DPMoviles\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\obj\Debug\slnWcfRestServiceParkingTest.dll
 F:\CROMSistemas\VS2012\DPMoviles\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\obj\Debug\slnWcfRestServiceParkingTest.pdb
+F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\bin\Debug\slnWcfRestServiceParkingTest.dll
+F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\bin\Debug\slnWcfRestServiceParkingTest.pdb
+F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\obj\Debug\slnWcfRestServiceParkingTest.dll
+F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\obj\Debug\slnWcfRestServiceParkingTest.pdb

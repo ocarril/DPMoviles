@@ -105,7 +105,7 @@ namespace slnWcfRestServiceParking.Persistencia
             }
             catch (Exception ex)
             {
-                throw ex;
+                objMesaje = "2";
             }
             return objMesaje;
         }

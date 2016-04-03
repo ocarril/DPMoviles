@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="22fe47e4-df21-4982-a5d4-651d727352c3" name="CROMSYSTEM@MUAKS-PC 2016-04-03 06:59:44" runUser="MUAKS-PC\CROMSYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="cdeb153d-5496-4227-b58f-5b1ef5546c2b">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="CROMSYSTEM_MUAKS-PC 2016-04-03 06_59_44" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-03T06:59:44.5703125-05:00" queuing="2016-04-03T06:59:46.7910156-05:00" start="2016-04-03T06:59:47.1533203-05:00" finish="2016-04-03T07:00:02.7851562-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="UserCrearTest" storage="f:\cromsistemas\vs2012\dpmoviles\vs2010\wcfmovilrest\slnwcfrestserviceparking\slnwcfrestserviceparkingtest\bin\debug\slnwcfrestserviceparkingtest.dll" id="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee">
+      <Execution id="17a86240-918d-4241-9e1f-ddb00eb7898b" />
+      <TestMethod codeBase="F:/CROMSistemas/VS2012/DPMoviles/VS2010/WCFMovilRest/slnWcfRestServiceParking/slnWcfRestServiceParkingTest/bin/Debug/slnWcfRestServiceParkingTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="slnWcfRestServiceParkingTest.UserTest, slnWcfRestServiceParkingTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UserCrearTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee" executionId="17a86240-918d-4241-9e1f-ddb00eb7898b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="17a86240-918d-4241-9e1f-ddb00eb7898b" testId="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee" testName="UserCrearTest" computerName="MUAKS-PC" duration="00:00:13.1719564" startTime="2016-04-03T06:59:47.4785156-05:00" endTime="2016-04-03T07:00:02.4619140-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17a86240-918d-4241-9e1f-ddb00eb7898b">
+    </UnitTestResult>
+  </Results>
+</TestRun>
