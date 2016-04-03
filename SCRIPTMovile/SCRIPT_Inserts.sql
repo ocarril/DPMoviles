@@ -1,3 +1,5 @@
+/*OCARRIL - 2016-Abr-03*/
+
 insert into [dbo].[user]
 ([name],	[lastName],		
 [email],	[password],
@@ -29,6 +31,59 @@ VALUES
 ('Estacionamiento','Marielisa Parking Services S.R.L','marielisa@gmail.com','1234',getdate()),
 ('Estacionamiento','Cochera D Edmundo',		'dedmundo@gmail.com','1234',getdate());
 
+insert into [dbo].[provider]([userID])
+VALUES
+(5),
+(6),
+(7),
+(8),
+(9),
+(10),
+(11),
+(12),
+(13),
+(14),
+(15),
+(16),
+(17),
+(18),
+(19);
+
+
+INSERT INTO [dbo].[parkingLot] (
+[providerID],
+[name],
+[address],
+[districtId],
+[description],
+[urlPicture],
+[longitud],
+[latitude],
+[LocalPhone],
+[openTime],
+[closeTime],
+[priceHour],
+[status])
+VALUES
+(1,'Los Portales Surco 1','Av. Prolongacion Primavera # 1549',127,		'Descripcion Los Portales  ....','img_portales.png',				-77.042783, -12.046884,'618-3636','07:00','23:55',10,1),
+(2,'Control Parking Surco','Av. Prolongacion Primavera # 1551',127,		'Descripcion Control Parking Surco ....','img_control_parking.png',	-77.042793, -12.046874,'619-3035','08:30','23:55',13,1),
+(3,'Valet Parking Surco','Av. Prolongacion Primavera # 1540',127,		'Descripcion Valet Parking ....','img_valet_parking.png',			-77.042763, -12.046854,'616-3636','07:30','23:55',9,1),
+(4,'Ayhoros Security Surco','Av. Prolongacion Primavera # 1530',127,	'Descripcion Ayhoros Security ....','img_ayhoros_security.png',		-77.042743, -12.046864,'618-3135','06:00','23:55',7,1),
+(5,'Golden Parking Surco','Av. Prolongacion Primavera # 1590',127,		'Descripcion Golden Parking  ....','img_golden_parking.png',		-77.042723, -12.046844,'615-3610','06:20','23:55',8.5,1),
+(6,'Central Parking Surco','Av. Prolongacion Primavera # 1480',127,		'Descripcion Central Parking ....','img_central_parking.png',		-77.042693, -12.046834,'615-3694','07:00','23:55',11,1),
+(7,'City Parking Surco','Av. Prolongacion Primavera # 1348',127,		'Descripcion City Parking ....','img_city_parking.png',				-77.042673, -12.046824,'616-3624','07:00','23:55',12,1),
+(8,'Best Parking Perú Surco','Av. Prolongacion Primavera # 1718',127,	'Descripcion Best Parking ....','img_best_parking.png',				-77.042663, -12.046794,'617-3636','07:00','23:55',5,1),
+(9,'Parkperu Surco','Av. Prolongacion Primavera # 1530',127,			'Descripcion Parkperu ....','img_parkperu.png',						-77.042653, -12.046774,'611-3622','07:00','23:55',4,1),
+(10,'Estacionamientos del Peru Surco','Av. Prolongacion Primavera # 1525',127,'Descripcion Estacionamientos ...','img_estacionamientos.png',-77.042633, -12.046744,'614-3699','07:00','23:55',10,1),
+(11,'Playa Mano Poderosa Surco','Av. Prolongacion Primavera # 1500',127,'Descripcion Mano Poderosa ....','img_mano_poderosa.png',			-77.042613, -12.046724,'615-3678','07:00','23:55',11,1),
+(12,'Intellisoft Parking Surco','Av. Prolongacion Primavera # 1502',133,'Descripcion Intellisoft Parkin ....','img_intellisoft_Parking.png',-77.042593, -12.046687,'617-3636','07:00','23:55',12,1),
+(13,'Lima Parking','Av. Prolongacion Primavera # 1578',133,				'Descripcion Lima Parking ....','img_lima_parking.png',				-77.042573, -12.046674,'655-3906','07:00','23:55',10,1),
+(14,'Marielisa Parking Services Surco','Av. Prolongacion Primavera # 1538',133,'Descripcion Marielisa Parking ....','img_marielisa.png',	-77.042563, -12.046644,'618-3746','07:00','23:55',14,1),
+(15,'Cochera D Edmundo Surco','Av. Prolongacion Primavera # 1548',133,	'Descripcion Cochera D Edmundo ....','img_edmundo.png',				-77.042553, -12.046631,'618-3676','07:00','23:55',19,1);
+GO
+
+
+/*OCARRIL - 2016-Abr-02*/
 
 INSERT INTO [dbo].[department]
            ([name])

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="be33dd64-7fe2-4f34-b393-75e160ebac38" name="CROMSYSTEM@MUAKS-PC 2016-04-03 03:16:52" runUser="MUAKS-PC\CROMSYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="cdeb153d-5496-4227-b58f-5b1ef5546c2b">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="F:\CROMSistemas\VS2012\DPMoviles\WCFMovilRest\slnWcfRestServiceParking\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="CROMSYSTEM_MUAKS-PC 2016-04-03 03_16_52" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-03T03:16:52.0908203-05:00" queuing="2016-04-03T03:17:02.5878906-05:00" start="2016-04-03T03:17:03.3916015-05:00" finish="2016-04-03T05:03:09.8349609-05:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MUAKS-PC" outcome="Error" timestamp="2016-04-03T05:03:09.8330078-05:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="UserCrearTest" storage="f:\cromsistemas\vs2012\dpmoviles\wcfmovilrest\slnwcfrestserviceparking\slnwcfrestserviceparkingtest\bin\debug\slnwcfrestserviceparkingtest.dll" id="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee">
+      <Execution id="3d28ea7b-8e57-4028-aabe-f739d3dd72ef" />
+      <TestMethod codeBase="F:/CROMSistemas/VS2012/DPMoviles/WCFMovilRest/slnWcfRestServiceParking/slnWcfRestServiceParkingTest/bin/Debug/slnWcfRestServiceParkingTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="slnWcfRestServiceParkingTest.UserTest, slnWcfRestServiceParkingTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UserCrearTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee" executionId="3d28ea7b-8e57-4028-aabe-f739d3dd72ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3d28ea7b-8e57-4028-aabe-f739d3dd72ef" testId="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee" testName="UserCrearTest" computerName="MUAKS-PC" duration="00:01:37.9774544" startTime="2016-04-03T03:17:04.0761718-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d28ea7b-8e57-4028-aabe-f739d3dd72ef">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method slnWcfRestServiceParkingTest.UserTest.UserCrearTest threw exception: 
+System.Net.WebException: Error en el servidor remoto: (405) Método no permitido.</Message>
+          <StackTrace>    en System.Net.HttpWebRequest.GetResponse()
+   en slnWcfRestServiceParkingTest.UserTest.UserCrearTest() en F:\CROMSistemas\VS2012\DPMoviles\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\UserTest.cs:línea 85
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

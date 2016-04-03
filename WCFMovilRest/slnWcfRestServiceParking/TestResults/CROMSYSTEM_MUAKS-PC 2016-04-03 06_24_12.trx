@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4c11752d-48c2-44a3-a4f4-850cd47eeee9" name="CROMSYSTEM@MUAKS-PC 2016-04-03 06:24:12" runUser="MUAKS-PC\CROMSYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="cdeb153d-5496-4227-b58f-5b1ef5546c2b">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="F:\CROMSistemas\VS2012\DPMoviles\WCFMovilRest\slnWcfRestServiceParking\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="CROMSYSTEM_MUAKS-PC 2016-04-03 06_24_12" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-03T06:24:12.7128906-05:00" queuing="2016-04-03T06:24:15.1777343-05:00" start="2016-04-03T06:24:15.5380859-05:00" finish="2016-04-03T06:27:23.4111328-05:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MUAKS-PC" outcome="Error" timestamp="2016-04-03T06:27:23.4072265-05:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="UserCrearTest" storage="f:\cromsistemas\vs2012\dpmoviles\wcfmovilrest\slnwcfrestserviceparking\slnwcfrestserviceparkingtest\bin\debug\slnwcfrestserviceparkingtest.dll" id="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee">
+      <Execution id="af43107c-bf88-4d83-840f-29129be7f61b" />
+      <TestMethod codeBase="F:/CROMSistemas/VS2012/DPMoviles/WCFMovilRest/slnWcfRestServiceParking/slnWcfRestServiceParkingTest/bin/Debug/slnWcfRestServiceParkingTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="slnWcfRestServiceParkingTest.UserTest, slnWcfRestServiceParkingTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UserCrearTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee" executionId="af43107c-bf88-4d83-840f-29129be7f61b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="af43107c-bf88-4d83-840f-29129be7f61b" testId="ec7ebb8e-94d4-9260-d6ee-2e06424e45ee" testName="UserCrearTest" computerName="MUAKS-PC" duration="00:03:07.4873047" startTime="2016-04-03T06:24:15.9228515-05:00" endTime="2016-04-03T06:27:23.4101562-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af43107c-bf88-4d83-840f-29129be7f61b">
+    </UnitTestResult>
+  </Results>
+</TestRun>
