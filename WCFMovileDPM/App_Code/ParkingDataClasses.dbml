@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_9FA6E8_parkingResBD" Class="ParkingDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=MUAKS-PC\SQLEXPRESS2014;Initial Catalog=DB_9FA6E8_parkingResBD;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_9FA6E8_parkingResBDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.department" Member="department">
+    <Type Name="department">
+      <Column Name="departmentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="department_province" Member="province" ThisKey="departmentId" OtherKey="departmentId" Type="province" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[user]" Member="user">
+    <Type Name="user">
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="registerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="user_provider" Member="provider" ThisKey="userID" OtherKey="userID" Type="provider" />
+      <Association Name="user_reservation" Member="reservation" ThisKey="userID" OtherKey="userID" Type="reservation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.disctrict" Member="disctrict">
+    <Type Name="disctrict">
+      <Column Name="districtId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="provinceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="province_disctrict" Member="province" ThisKey="provinceId" OtherKey="provinceId" Type="province" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.parkingLot" Member="parkingLot">
+    <Type Name="parkingLot">
+      <Column Name="parkingLotID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="providerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="districtId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="department" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="urlPicture" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="longitud" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="latitude" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="LocalPhone" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="openTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="closeTime" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="priceHour" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="parkingLot_parkingSpace" Member="parkingSpace" ThisKey="parkingLotID" OtherKey="parkingLotID" Type="parkingSpace" />
+      <Association Name="provider_parkingLot" Member="provider" ThisKey="providerID" OtherKey="providerID" Type="provider" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.parkingSpace" Member="parkingSpace">
+    <Type Name="parkingSpace">
+      <Column Name="parkingSpaceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="parkingLotID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="shortName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="parkingSpace_reservation" Member="reservation" ThisKey="parkingSpaceID" OtherKey="parkingSpaceID" Type="reservation" />
+      <Association Name="parkingLot_parkingSpace" Member="parkingLot" ThisKey="parkingLotID" OtherKey="parkingLotID" Type="parkingLot" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.provider" Member="provider">
+    <Type Name="provider">
+      <Column Name="providerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="provider_parkingLot" Member="parkingLot" ThisKey="providerID" OtherKey="providerID" Type="parkingLot" />
+      <Association Name="user_provider" Member="user" ThisKey="userID" OtherKey="userID" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.province" Member="province">
+    <Type Name="province">
+      <Column Name="provinceId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="departmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="province_disctrict" Member="disctrict" ThisKey="provinceId" OtherKey="provinceId" Type="disctrict" />
+      <Association Name="department_province" Member="department" ThisKey="departmentId" OtherKey="departmentId" Type="department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reservation" Member="reservation">
+    <Type Name="reservation">
+      <Column Name="reservationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="parkingSpaceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateReservation" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="startParking" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="finishParking" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="parkingSpace_reservation" Member="parkingSpace" ThisKey="parkingSpaceID" OtherKey="parkingSpaceID" Type="parkingSpace" IsForeignKey="true" />
+      <Association Name="user_reservation" Member="user" ThisKey="userID" OtherKey="userID" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
