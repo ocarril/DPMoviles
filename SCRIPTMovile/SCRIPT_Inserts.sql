@@ -1,19 +1,18 @@
 /*OCARRIL - 2016-Abr-03*/
+use [DB_9FA6E8_parkingResBD]
+go
 
 insert into [dbo].[user]
-([name],	[lastName],		
-[email],	[password],
-[registerDate])
+([name],	[lastName],[email],	[password],[registerDate])
 VALUES
 ('Edgard','Melgarejo','emelgarejo@his.com.pe','1234',getdate()),
 ('Daniel','Juarez','daniel.juarez.ignacio@gmail.com','1234',getdate()),
 ('Orlando','Carril','omcr1905@gmail.com','1234',getdate()),
 ('Ronald','Landa','rnld1503@gmail.com','1234',getdate());
+GO
 
 insert into [dbo].[user]
-([name],	[lastName],		
-[email],	[password],
-[registerDate])
+([name],	[lastName],	[email],[password],[registerDate])
 VALUES
 ('Estacionamiento','Los Portales',			'portales@gmail.com','1234',getdate()),
 ('Estacionamiento','Control Parking S.A.C.','controlp@gmail.com','1234',getdate()),
@@ -30,6 +29,7 @@ VALUES
 ('Estacionamiento','Lima Parking',			'limap@gmail.com','1234',getdate()),
 ('Estacionamiento','Marielisa Parking Services S.R.L','marielisa@gmail.com','1234',getdate()),
 ('Estacionamiento','Cochera D Edmundo',		'dedmundo@gmail.com','1234',getdate());
+GO
 
 insert into [dbo].[provider]([userID])
 VALUES
@@ -48,40 +48,7 @@ VALUES
 (17),
 (18),
 (19);
-
-
-INSERT INTO [dbo].[parkingLot] (
-[providerID],
-[name],
-[address],
-[districtId],
-[description],
-[urlPicture],
-[longitud],
-[latitude],
-[LocalPhone],
-[openTime],
-[closeTime],
-[priceHour],
-[status])
-VALUES
-(1,'Los Portales Surco 1','Av. Prolongacion Primavera # 1549',127,		'Descripcion Los Portales  ....','img_portales.png',				-77.042783, -12.046884,'618-3636','07:00','23:55',10,1),
-(2,'Control Parking Surco','Av. Prolongacion Primavera # 1551',127,		'Descripcion Control Parking Surco ....','img_control_parking.png',	-77.042793, -12.046874,'619-3035','08:30','23:55',13,1),
-(3,'Valet Parking Surco','Av. Prolongacion Primavera # 1540',127,		'Descripcion Valet Parking ....','img_valet_parking.png',			-77.042763, -12.046854,'616-3636','07:30','23:55',9,1),
-(4,'Ayhoros Security Surco','Av. Prolongacion Primavera # 1530',127,	'Descripcion Ayhoros Security ....','img_ayhoros_security.png',		-77.042743, -12.046864,'618-3135','06:00','23:55',7,1),
-(5,'Golden Parking Surco','Av. Prolongacion Primavera # 1590',127,		'Descripcion Golden Parking  ....','img_golden_parking.png',		-77.042723, -12.046844,'615-3610','06:20','23:55',8.5,1),
-(6,'Central Parking Surco','Av. Prolongacion Primavera # 1480',127,		'Descripcion Central Parking ....','img_central_parking.png',		-77.042693, -12.046834,'615-3694','07:00','23:55',11,1),
-(7,'City Parking Surco','Av. Prolongacion Primavera # 1348',127,		'Descripcion City Parking ....','img_city_parking.png',				-77.042673, -12.046824,'616-3624','07:00','23:55',12,1),
-(8,'Best Parking Perú Surco','Av. Prolongacion Primavera # 1718',127,	'Descripcion Best Parking ....','img_best_parking.png',				-77.042663, -12.046794,'617-3636','07:00','23:55',5,1),
-(9,'Parkperu Surco','Av. Prolongacion Primavera # 1530',127,			'Descripcion Parkperu ....','img_parkperu.png',						-77.042653, -12.046774,'611-3622','07:00','23:55',4,1),
-(10,'Estacionamientos del Peru Surco','Av. Prolongacion Primavera # 1525',127,'Descripcion Estacionamientos ...','img_estacionamientos.png',-77.042633, -12.046744,'614-3699','07:00','23:55',10,1),
-(11,'Playa Mano Poderosa Surco','Av. Prolongacion Primavera # 1500',127,'Descripcion Mano Poderosa ....','img_mano_poderosa.png',			-77.042613, -12.046724,'615-3678','07:00','23:55',11,1),
-(12,'Intellisoft Parking Surco','Av. Prolongacion Primavera # 1502',133,'Descripcion Intellisoft Parkin ....','img_intellisoft_Parking.png',-77.042593, -12.046687,'617-3636','07:00','23:55',12,1),
-(13,'Lima Parking','Av. Prolongacion Primavera # 1578',133,				'Descripcion Lima Parking ....','img_lima_parking.png',				-77.042573, -12.046674,'655-3906','07:00','23:55',10,1),
-(14,'Marielisa Parking Services Surco','Av. Prolongacion Primavera # 1538',133,'Descripcion Marielisa Parking ....','img_marielisa.png',	-77.042563, -12.046644,'618-3746','07:00','23:55',14,1),
-(15,'Cochera D Edmundo Surco','Av. Prolongacion Primavera # 1548',133,	'Descripcion Cochera D Edmundo ....','img_edmundo.png',				-77.042553, -12.046631,'618-3676','07:00','23:55',19,1);
 GO
-
 
 /*OCARRIL - 2016-Abr-02*/
 
@@ -115,8 +82,7 @@ INSERT INTO [dbo].[department]
 ('UCAYALI');
 GO
 
-
-INSERT INTO province (nombre, departmentId) VALUES
+INSERT INTO province (name, departmentId) VALUES
 ('CHACHAPOYAS ', 1),
 ('BAGUA', 1),
 ('BONGARA', 1),
@@ -313,7 +279,7 @@ INSERT INTO province (nombre, departmentId) VALUES
 
 
 INSERT INTO [dbo].[province]
-           ([nombre]
+           ([name]
            ,[departmentId])
      VALUES
 ('CHACHAPOYAS ', 1),
@@ -510,7 +476,6 @@ INSERT INTO [dbo].[province]
 ( 'PADRE ABAD', 25),
 ( 'PURUS', 25)
 GO
-
 
 INSERT INTO [dbo].[disctrict]
            ([name]
@@ -1519,7 +1484,6 @@ INSERT INTO [dbo].[disctrict]
 
 GO
 
-
 INSERT INTO [dbo].[disctrict]
            ([name]
            ,[provinceId])
@@ -2357,5 +2321,206 @@ INSERT INTO [dbo].[disctrict]
 ( 'PURUS', 193)
 GO
 
+/*OCARRIL - 2016-Abr-02*/
 
+INSERT INTO [dbo].[parkingLot] (
+[providerID],
+[name],
+[address],
+[districtId],
+[description],
+[urlPicture],
+[longitud],
+[latitude],
+[LocalPhone],
+[openTime],
+[closeTime],
+[priceHour],
+[status])
+VALUES
+(1,'Los Portales Surco 1','Av. Prolongacion Primavera # 1549',1290,		'Descripcion Los Portales  ....','img_portales.png',				-77.042783, -12.046884,'618-3636','07:00','23:55',10,1),
+(2,'Control Parking Surco','Av. Prolongacion Primavera # 1551',1290,		'Descripcion Control Parking Surco ....','img_control_parking.png',	-77.042793, -12.046874,'619-3035','08:30','23:55',13,1),
+(3,'Valet Parking Surco','Av. Prolongacion Primavera # 1540',1290,		'Descripcion Valet Parking ....','img_valet_parking.png',			-77.042763, -12.046854,'616-3636','07:30','23:55',9,1),
+(4,'Ayhoros Security Surco','Av. Prolongacion Primavera # 1530',1290,	'Descripcion Ayhoros Security ....','img_ayhoros_security.png',		-77.042743, -12.046864,'618-3135','06:00','23:55',7,1),
+(5,'Golden Parking Surco','Av. Prolongacion Primavera # 1590',1290,		'Descripcion Golden Parking  ....','img_golden_parking.png',		-77.042723, -12.046844,'615-3610','06:20','23:55',8.5,1),
+(6,'Central Parking Surco','Av. Prolongacion Primavera # 1480',1290,		'Descripcion Central Parking ....','img_central_parking.png',		-77.042693, -12.046834,'615-3694','07:00','23:55',11,1),
+(7,'City Parking Surco','Av. Prolongacion Primavera # 1348',1290,		'Descripcion City Parking ....','img_city_parking.png',				-77.042673, -12.046824,'616-3624','07:00','23:55',12,1),
+(8,'Best Parking Perú Surco','Av. Prolongacion Primavera # 1718',1290,	'Descripcion Best Parking ....','img_best_parking.png',				-77.042663, -12.046794,'617-3636','07:00','23:55',5,1),
+(9,'Parkperu Surco','Av. Prolongacion Primavera # 1530',1290,			'Descripcion Parkperu ....','img_parkperu.png',						-77.042653, -12.046774,'611-3622','07:00','23:55',4,1),
+(10,'Estacionamientos del Peru Surco','Av. Prolongacion Primavera # 1525',1290,'Descripcion Estacionamientos ...','img_estacionamientos.png',-77.042633, -12.046744,'614-3699','07:00','23:55',10,1),
+(11,'Playa Mano Poderosa Surco','Av. Prolongacion Primavera # 1500',1290,'Descripcion Mano Poderosa ....','img_mano_poderosa.png',			-77.042613, -12.046724,'615-3678','07:00','23:55',11,1),
+(12,'Intellisoft Parking Surco','Av. Prolongacion Primavera # 1502',1290,'Descripcion Intellisoft Parkin ....','img_intellisoft_Parking.png',-77.042593, -12.046687,'617-3636','07:00','23:55',12,1),
+(13,'Lima Parking','Av. Prolongacion Primavera # 1578',1290,				'Descripcion Lima Parking ....','img_lima_parking.png',				-77.042573, -12.046674,'655-3906','07:00','23:55',10,1),
+(14,'Marielisa Parking Services Surco','Av. Prolongacion Primavera # 1538',1290,'Descripcion Marielisa Parking ....','img_marielisa.png',	-77.042563, -12.046644,'618-3746','07:00','23:55',14,1),
+(15,'Cochera D Edmundo Surco','Av. Prolongacion Primavera # 1548',1290,	'Descripcion Cochera D Edmundo ....','img_edmundo.png',				-77.042553, -12.046631,'618-3676','07:00','23:55',19,1);
+GO
 
+INSERT INTO  [dbo].[parkingSpace](
+[parkingLotID],[shortName], [status])
+VALUES
+(1,'A 01',1),
+(2,'A 01',1),
+(3,'A 01',1),
+(4,'A 01',1),
+(5,'A 01',1),
+(6,'A 01',1),
+(7,'A 01',1),
+(8,'A 01',1),
+(9,'A 01',1),
+(10,'A 01',1),
+(11,'A 01',1),
+(12,'A 01',1),
+(13,'A 01',1),
+(14,'A 01',1),
+(15,'A 01',1),
+(1,'B 01',1),
+(2,'B 01',1),
+(3,'B 01',1),
+(4,'B 01',1),
+(5,'B 01',1),
+(6,'B 01',1),
+(7,'B 01',1),
+(8,'B 01',1),
+(9,'B 01',1),
+(10,'B 01',1),
+(11,'B 01',1),
+(12,'B 01',1),
+(13,'B 01',1),
+(14,'B 01',1),
+(15,'B 01',1),
+(1,'C 01',1),
+(2,'C 01',1),
+(3,'C 01',1),
+(4,'C 01',1),
+(5,'C 01',1),
+(6,'C 01',1),
+(7,'C 01',1),
+(8,'C 01',1),
+(9,'C 01',1),
+(10,'C 01',1),
+(11,'C 01',1),
+(12,'C 01',1),
+(13,'C 01',1),
+(14,'C 01',1),
+(15,'C 01',1),
+(1,'D 01',1),
+(2,'D 01',1),
+(3,'D 01',1),
+(4,'D 01',1),
+(5,'D 01',1),
+(6,'D 01',1),
+(7,'D 01',1),
+(8,'D 01',1),
+(9,'D 01',1),
+(10,'D 01',1),
+(11,'D 01',1),
+(12,'D 01',1),
+(13,'D 01',1),
+(14,'D 01',1),
+(15,'D 01',1),
+(1,'E 01',1),
+(2,'E 01',1),
+(3,'E 01',1),
+(4,'E 01',1),
+(5,'E 01',1),
+(6,'E 01',1),
+(7,'E 01',1),
+(8,'E 01',1),
+(9,'E 01',1),
+(10,'E 01',1),
+(11,'E 01',1),
+(12,'E 01',1),
+(13,'E 01',1),
+(14,'E 01',1),
+(15,'E 01',1),
+(1,'F 01',1),
+(2,'F 01',1),
+(3,'F 01',1),
+(4,'F 01',1),
+(5,'F 01',1),
+(6,'F 01',1),
+(7,'F 01',1),
+(8,'F 01',1),
+(9,'F 01',1),
+(10,'F 01',1),
+(11,'F 01',1),
+(12,'F 01',1),
+(13,'F 01',1),
+(14,'F 01',1),
+(15,'F 01',1),
+(1,'G 01',1),
+(2,'G 01',1),
+(3,'G 01',1),
+(4,'G 01',1),
+(5,'G 01',1),
+(6,'G 01',1),
+(7,'G 01',1),
+(8,'G 01',1),
+(9,'G 01',1),
+(10,'G 01',1),
+(11,'G 01',1),
+(12,'G 01',1),
+(13,'G 01',1),
+(14,'G 01',1),
+(15,'G 01',1),
+(1,'H 01',1),
+(2,'H 01',1),
+(3,'H 01',1),
+(4,'H 01',1),
+(5,'H 01',1),
+(6,'H 01',1),
+(7,'H 01',1),
+(8,'H 01',1),
+(9,'H 01',1),
+(10,'H 01',1),
+(11,'H 01',1),
+(12,'H 01',1),
+(13,'H 01',1),
+(14,'H 01',1),
+(15,'H 01',1),
+(1,'I 01',1),
+(2,'I 01',1),
+(3,'I 01',1),
+(4,'I 01',1),
+(5,'I 01',1),
+(6,'I 01',1),
+(7,'I 01',1),
+(8,'I 01',1),
+(9,'I 01',1),
+(10,'I 01',1),
+(11,'I 01',1),
+(12,'I 01',1),
+(13,'I 01',1),
+(14,'I 01',1),
+(15,'I 01',1),
+(1,'J 01',1),
+(2,'J 01',1),
+(3,'J 01',1),
+(4,'J 01',1),
+(5,'J 01',1),
+(6,'J 01',1),
+(7,'J 01',1),
+(8,'J 01',1),
+(9,'J 01',1),
+(10,'J 01',1),
+(11,'J 01',1),
+(12,'J 01',1),
+(13,'J 01',1),
+(14,'J 01',1),
+(15,'J 01',1),
+(1,'K 01',1),
+(2,'K 01',1),
+(3,'K 01',1),
+(4,'K 01',1),
+(5,'K 01',1),
+(6,'K 01',1),
+(7,'K 01',1),
+(8,'K 01',1),
+(9,'K 01',1),
+(10,'K 01',1),
+(11,'K 01',1),
+(12,'K 01',1),
+(13,'K 01',1),
+(14,'K 01',1),
+(15,'K 01',1)
+;

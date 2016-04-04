@@ -57,7 +57,7 @@ namespace slnWcfRestServiceParking.Persistencia
     #endregion
 		
 		public ParkingDataClassesDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DB_9FA6E8_parkingResBDConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DB_9FA6E8_parkingResBDConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -539,6 +539,8 @@ namespace slnWcfRestServiceParking.Persistencia
 		
 		private int _provinceId;
 		
+		private EntitySet<parkingLot> _parkingLots;
+		
 		private EntityRef<province> _province;
 		
     #region Extensibility Method Definitions
@@ -555,6 +557,7 @@ namespace slnWcfRestServiceParking.Persistencia
 		
 		public disctrict()
 		{
+			this._parkingLots = new EntitySet<parkingLot>(new Action<parkingLot>(this.attach_parkingLots), new Action<parkingLot>(this.detach_parkingLots));
 			this._province = default(EntityRef<province>);
 			OnCreated();
 		}
@@ -623,6 +626,19 @@ namespace slnWcfRestServiceParking.Persistencia
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="disctrict_parkingLot", Storage="_parkingLots", ThisKey="districtId", OtherKey="districtId")]
+		public EntitySet<parkingLot> parkingLots
+		{
+			get
+			{
+				return this._parkingLots;
+			}
+			set
+			{
+				this._parkingLots.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="province_disctrict", Storage="_province", ThisKey="provinceId", OtherKey="provinceId", IsForeignKey=true)]
 		public province province
 		{
@@ -676,6 +692,18 @@ namespace slnWcfRestServiceParking.Persistencia
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
+		
+		private void attach_parkingLots(parkingLot entity)
+		{
+			this.SendPropertyChanging();
+			entity.disctrict = this;
+		}
+		
+		private void detach_parkingLots(parkingLot entity)
+		{
+			this.SendPropertyChanging();
+			entity.disctrict = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.parkingLot")]
@@ -693,8 +721,6 @@ namespace slnWcfRestServiceParking.Persistencia
 		private string _address;
 		
 		private int _districtId;
-		
-		private string _department;
 		
 		private string _description;
 		
@@ -716,6 +742,8 @@ namespace slnWcfRestServiceParking.Persistencia
 		
 		private EntitySet<parkingSpace> _parkingSpaces;
 		
+		private EntityRef<disctrict> _disctrict;
+		
 		private EntityRef<provider> _provider;
 		
     #region Extensibility Method Definitions
@@ -732,8 +760,6 @@ namespace slnWcfRestServiceParking.Persistencia
     partial void OnaddressChanged();
     partial void OndistrictIdChanging(int value);
     partial void OndistrictIdChanged();
-    partial void OndepartmentChanging(string value);
-    partial void OndepartmentChanged();
     partial void OndescriptionChanging(string value);
     partial void OndescriptionChanged();
     partial void OnurlPictureChanging(string value);
@@ -757,6 +783,7 @@ namespace slnWcfRestServiceParking.Persistencia
 		public parkingLot()
 		{
 			this._parkingSpaces = new EntitySet<parkingSpace>(new Action<parkingSpace>(this.attach_parkingSpaces), new Action<parkingSpace>(this.detach_parkingSpaces));
+			this._disctrict = default(EntityRef<disctrict>);
 			this._provider = default(EntityRef<provider>);
 			OnCreated();
 		}
@@ -856,31 +883,15 @@ namespace slnWcfRestServiceParking.Persistencia
 			{
 				if ((this._districtId != value))
 				{
+					if (this._disctrict.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OndistrictIdChanging(value);
 					this.SendPropertyChanging();
 					this._districtId = value;
 					this.SendPropertyChanged("districtId");
 					this.OndistrictIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_department", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string department
-		{
-			get
-			{
-				return this._department;
-			}
-			set
-			{
-				if ((this._department != value))
-				{
-					this.OndepartmentChanging(value);
-					this.SendPropertyChanging();
-					this._department = value;
-					this.SendPropertyChanged("department");
-					this.OndepartmentChanged();
 				}
 			}
 		}
@@ -1075,6 +1086,40 @@ namespace slnWcfRestServiceParking.Persistencia
 			set
 			{
 				this._parkingSpaces.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="disctrict_parkingLot", Storage="_disctrict", ThisKey="districtId", OtherKey="districtId", IsForeignKey=true)]
+		public disctrict disctrict
+		{
+			get
+			{
+				return this._disctrict.Entity;
+			}
+			set
+			{
+				disctrict previousValue = this._disctrict.Entity;
+				if (((previousValue != value) 
+							|| (this._disctrict.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._disctrict.Entity = null;
+						previousValue.parkingLots.Remove(this);
+					}
+					this._disctrict.Entity = value;
+					if ((value != null))
+					{
+						value.parkingLots.Add(this);
+						this._districtId = value.districtId;
+					}
+					else
+					{
+						this._districtId = default(int);
+					}
+					this.SendPropertyChanged("disctrict");
+				}
 			}
 		}
 		
@@ -1535,7 +1580,7 @@ namespace slnWcfRestServiceParking.Persistencia
 		
 		private int _provinceId;
 		
-		private string _nombre;
+		private string _name;
 		
 		private System.Nullable<int> _departmentId;
 		
@@ -1549,8 +1594,8 @@ namespace slnWcfRestServiceParking.Persistencia
     partial void OnCreated();
     partial void OnprovinceIdChanging(int value);
     partial void OnprovinceIdChanged();
-    partial void OnnombreChanging(string value);
-    partial void OnnombreChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
     partial void OndepartmentIdChanging(System.Nullable<int> value);
     partial void OndepartmentIdChanged();
     #endregion
@@ -1582,22 +1627,22 @@ namespace slnWcfRestServiceParking.Persistencia
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="VarChar(100)")]
-		public string nombre
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(100)")]
+		public string name
 		{
 			get
 			{
-				return this._nombre;
+				return this._name;
 			}
 			set
 			{
-				if ((this._nombre != value))
+				if ((this._name != value))
 				{
-					this.OnnombreChanging(value);
+					this.OnnameChanging(value);
 					this.SendPropertyChanging();
-					this._nombre = value;
-					this.SendPropertyChanged("nombre");
-					this.OnnombreChanged();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
 				}
 			}
 		}

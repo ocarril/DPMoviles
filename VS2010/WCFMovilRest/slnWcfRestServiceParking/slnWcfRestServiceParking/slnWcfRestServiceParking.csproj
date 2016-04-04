@@ -34,7 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System" />
@@ -54,6 +57,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Parking.svc" />
     <Content Include="Users.svc" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -64,13 +68,25 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Disctrict.cs" />
+    <Compile Include="Dominio\Province.cs" />
+    <Compile Include="Dominio\Department.cs" />
+    <Compile Include="Dominio\ParkingLot.cs" />
+    <Compile Include="Dominio\ParkingSpace.cs" />
+    <Compile Include="Dominio\Provider.cs" />
+    <Compile Include="Dominio\Reservation.cs" />
     <Compile Include="Dominio\User.cs" />
-    <Compile Include="IUsers.cs" />
+    <Compile Include="Interfaces\IUsers.cs" />
+    <Compile Include="IParking.cs" />
+    <Compile Include="Parking.svc.cs">
+      <DependentUpon>Parking.svc</DependentUpon>
+    </Compile>
     <Compile Include="Persistencia\ParkingDataClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ParkingDataClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Persistencia\ParkingLotDAO.cs" />
     <Compile Include="Persistencia\UserDAO.cs" />
     <Compile Include="Persistencia\UtilConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

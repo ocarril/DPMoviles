@@ -1,102 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14, 8.5" name="ParkingDataClasses">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14, 10.625" name="ParkingDataClasses">
   <DataContextMoniker Name="/ParkingDataClassesDataContext" />
   <nestedChildShapes>
-    <classShape Id="05fec1cb-f500-47e8-918c-94143df09ba3" absoluteBounds="0.75, 6, 2, 1.1939925130208344">
+    <classShape Id="23820ecf-4d05-4276-9047-775709f4482a" absoluteBounds="1.5, 9.125, 2, 1.1939925130208344">
       <DataClassMoniker Name="/ParkingDataClassesDataContext/department" />
       <nestedChildShapes>
-        <elementListCompartment Id="89d93f0f-c28e-4405-bd7c-60a530c4cc22" absoluteBounds="0.765, 6.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8bfe3348-9587-45b0-abab-7b23db35aeca" absoluteBounds="1.5150000000000001, 9.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="353ec544-64f1-4a6c-a0ef-9f1ede7f201b" absoluteBounds="0.75, 1.75, 2, 2.1554996744791666">
+    <classShape Id="67dc485a-db79-403e-902f-a341e99666a7" absoluteBounds="0.75, 1.625, 2, 2.1554996744791666">
       <DataClassMoniker Name="/ParkingDataClassesDataContext/user" />
       <nestedChildShapes>
-        <elementListCompartment Id="072490af-1e00-47d4-8da1-a4ca8c0f7e0d" absoluteBounds="0.765, 2.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="26336b82-1df3-4f2d-aa5d-6549bfdaed3f" absoluteBounds="0.765, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4291964a-7c18-4597-97a2-cb8ea9e37c70" absoluteBounds="6.25, 5.875, 2, 1.3862939453125005">
+    <classShape Id="365396fd-fb71-4b0c-9230-ce3e3526fdaf" absoluteBounds="3.5, 6, 2, 1.3862939453125005">
       <DataClassMoniker Name="/ParkingDataClassesDataContext/disctrict" />
       <nestedChildShapes>
-        <elementListCompartment Id="cd98a8c2-655b-4b03-8a30-b5700eb15da6" absoluteBounds="6.265, 6.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="edd7c30e-1332-4356-a85f-90c325882054" absoluteBounds="3.515, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9dedd635-fd40-4694-ad78-ef9ece146899" absoluteBounds="6.25, 1, 2, 3.6939111328124992">
+    <classShape Id="7a2ba1fb-eb08-4ea1-96f4-06dc426546b0" absoluteBounds="6.25, 1, 2, 3.5016097005208326">
       <DataClassMoniker Name="/ParkingDataClassesDataContext/parkingLot" />
       <nestedChildShapes>
-        <elementListCompartment Id="051759ab-0d35-4d3a-8c51-33353abd7405" absoluteBounds="6.265, 1.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ea37e8e7-21ba-467d-be3b-1a0e3d2e5b81" absoluteBounds="6.265, 1.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6728da70-d0ef-4685-ba88-802ae8692339" absoluteBounds="9, 2.125, 2, 1.5785953776041666">
+    <classShape Id="823e8e41-c57e-4846-9bc8-e2c020b3dead" absoluteBounds="9, 2, 2, 1.5785953776041666">
       <DataClassMoniker Name="/ParkingDataClassesDataContext/parkingSpace" />
       <nestedChildShapes>
-        <elementListCompartment Id="9ab43437-b10b-44c1-a872-32f7419b830f" absoluteBounds="9.015, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ace8a04a-333b-4636-b88f-e0d55d572d38" absoluteBounds="9.015, 2.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4839f0c8-79c1-4783-a5d8-5f8419b9a0a5" absoluteBounds="3.5, 2.125, 2, 1.3862939453125005">
+    <classShape Id="9208c1ec-d3ed-4d25-9d0c-0a2f45605efc" absoluteBounds="3.5, 2, 2, 1.3862939453125005">
       <DataClassMoniker Name="/ParkingDataClassesDataContext/provider" />
       <nestedChildShapes>
-        <elementListCompartment Id="466665aa-39d9-48d8-bda2-636e9de5ffb7" absoluteBounds="3.515, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4acfb076-8416-43d2-977d-d8b334737d9e" absoluteBounds="3.515, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6a5cd95b-01c7-4cbc-ba5a-f46635821687" absoluteBounds="3.5, 5.875, 2, 1.3862939453125005">
+    <classShape Id="c4597ad3-57d8-49d1-83ca-333dff499949" absoluteBounds="0.75, 6, 2, 1.3862939453125005">
       <DataClassMoniker Name="/ParkingDataClassesDataContext/province" />
       <nestedChildShapes>
-        <elementListCompartment Id="4c64cac6-e37b-4f04-a2af-0a22ae78c1d5" absoluteBounds="3.515, 6.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="985ef78e-5024-4519-b303-3063890ca918" absoluteBounds="0.765, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="fa4f2b6d-0639-45d5-8d77-e91211bbe0c5" absoluteBounds="11.75, 1.75, 2, 2.1554996744791666">
+    <classShape Id="98edc8c0-6209-4653-828c-87959983ed18" absoluteBounds="11.75, 1.625, 2, 2.1554996744791666">
       <DataClassMoniker Name="/ParkingDataClassesDataContext/reservation" />
       <nestedChildShapes>
-        <elementListCompartment Id="e0545da3-d1aa-4ccb-acc7-08b2b7568657" absoluteBounds="11.765, 2.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9e927371-4cd0-4435-bdbd-ce7720c5d118" absoluteBounds="11.765, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(8.25 : 2.91429768880208); (9 : 2.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 6.69314697265625); (7.25 : 6.69314697265625); (7.25 : 4.50160970052083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ParkingDataClassesDataContext/disctrict/disctrict_parkingLot" />
+      <nodes>
+        <classShapeMoniker Id="365396fd-fb71-4b0c-9230-ce3e3526fdaf" />
+        <classShapeMoniker Id="7a2ba1fb-eb08-4ea1-96f4-06dc426546b0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.78929768880208); (9 : 2.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/parkingLot/parkingLot_parkingSpace" />
       <nodes>
-        <classShapeMoniker Id="9dedd635-fd40-4694-ad78-ef9ece146899" />
-        <classShapeMoniker Id="6728da70-d0ef-4685-ba88-802ae8692339" />
+        <classShapeMoniker Id="7a2ba1fb-eb08-4ea1-96f4-06dc426546b0" />
+        <classShapeMoniker Id="823e8e41-c57e-4846-9bc8-e2c020b3dead" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 2.81814697265625); (6.25 : 2.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 2.69314697265625); (6.25 : 2.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/provider/provider_parkingLot" />
       <nodes>
-        <classShapeMoniker Id="4839f0c8-79c1-4783-a5d8-5f8419b9a0a5" />
-        <classShapeMoniker Id="9dedd635-fd40-4694-ad78-ef9ece146899" />
+        <classShapeMoniker Id="9208c1ec-d3ed-4d25-9d0c-0a2f45605efc" />
+        <classShapeMoniker Id="7a2ba1fb-eb08-4ea1-96f4-06dc426546b0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 2.81814697265625); (3.16666666666667 : 2.81814697265625 : JumpStart); (3.33333333333333 : 2.81814697265625 : JumpEnd); (3.5 : 2.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 2.69314697265625); (3.16666666666667 : 2.69314697265625 : JumpStart); (3.33333333333333 : 2.69314697265625 : JumpEnd); (3.5 : 2.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/user/user_provider" />
       <nodes>
-        <classShapeMoniker Id="353ec544-64f1-4a6c-a0ef-9f1ede7f201b" />
-        <classShapeMoniker Id="4839f0c8-79c1-4783-a5d8-5f8419b9a0a5" />
+        <classShapeMoniker Id="67dc485a-db79-403e-902f-a341e99666a7" />
+        <classShapeMoniker Id="9208c1ec-d3ed-4d25-9d0c-0a2f45605efc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 6.56814697265625); (6.25 : 6.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 6.69314697265625); (3.5 : 6.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/province/province_disctrict" />
       <nodes>
-        <classShapeMoniker Id="6a5cd95b-01c7-4cbc-ba5a-f46635821687" />
-        <classShapeMoniker Id="4291964a-7c18-4597-97a2-cb8ea9e37c70" />
+        <classShapeMoniker Id="c4597ad3-57d8-49d1-83ca-333dff499949" />
+        <classShapeMoniker Id="365396fd-fb71-4b0c-9230-ce3e3526fdaf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 6.59699625651042); (3.5 : 6.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.125 : 9.125); (2.125 : 7.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/department/department_province" />
       <nodes>
-        <classShapeMoniker Id="05fec1cb-f500-47e8-918c-94143df09ba3" />
-        <classShapeMoniker Id="6a5cd95b-01c7-4cbc-ba5a-f46635821687" />
+        <classShapeMoniker Id="23820ecf-4d05-4276-9047-775709f4482a" />
+        <classShapeMoniker Id="c4597ad3-57d8-49d1-83ca-333dff499949" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11 : 2.91429768880208); (11.75 : 2.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(11 : 2.78929768880208); (11.75 : 2.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/parkingSpace/parkingSpace_reservation" />
       <nodes>
-        <classShapeMoniker Id="6728da70-d0ef-4685-ba88-802ae8692339" />
-        <classShapeMoniker Id="fa4f2b6d-0639-45d5-8d77-e91211bbe0c5" />
+        <classShapeMoniker Id="823e8e41-c57e-4846-9bc8-e2c020b3dead" />
+        <classShapeMoniker Id="98edc8c0-6209-4653-828c-87959983ed18" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 3.39307532356771); (3.25 : 3.39307532356771); (3.25 : 0.75); (12.75 : 0.75); (12.75 : 1.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 3.26807532356771); (3.25 : 3.26807532356771); (3.25 : 0.75); (12.75 : 0.75); (12.75 : 1.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/user/user_reservation" />
       <nodes>
-        <classShapeMoniker Id="353ec544-64f1-4a6c-a0ef-9f1ede7f201b" />
-        <classShapeMoniker Id="fa4f2b6d-0639-45d5-8d77-e91211bbe0c5" />
+        <classShapeMoniker Id="67dc485a-db79-403e-902f-a341e99666a7" />
+        <classShapeMoniker Id="98edc8c0-6209-4653-828c-87959983ed18" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

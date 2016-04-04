@@ -1,14 +1,45 @@
+select 
+p.parkingLotID,	p.providerID,	p.name, 
+p.address,		p.districtId,	p.description,
+p.urlPicture,	p.longitud,		p.latitude,
+p.LocalPhone,	p.openTime,		p.closeTime,
+p.priceHour,	p.status,
+v.userID,		
+u.lastName	userlastName,
+d.name		districtName,
+r.name		provinceName,
+m.name		departmentName
+from	 [dbo].[parkingLot]		p
+inner join [dbo].[provider]		v on v.providerID	= p.providerID
+inner join [dbo].[user]			u on u.userID		= v.userID
+inner join [dbo].[disctrict]	d on d.districtId	= p.districtId
+inner join [dbo].[province]		r on r.provinceId	= d.provinceId
+inner join [dbo].[department]	m on m.departmentId = r.departmentId;
+
+
+
+update [dbo].[parkingLot]
+set [districtId]=1290
+go
+
+/*Cambiar el nombre de una columna*/
+EXEC sp_rename '[dbo].[province].nombre', 'name', 'COLUMN';
+GO
+
+select * from [dbo].[parkingLot]
+select * from [dbo].[parkingSpace] pl where pl.parkingLotID=1
+
 /*Tablas con Data*/
 select * from [dbo].[user]
 select * from [dbo].[department]
-select * from [dbo].[province]
-select * from [dbo].[disctrict]
+select * from [dbo].[province] p where p.departmentId=15
+select * from [dbo].[disctrict]p where p.provinceId=127
 
 /*Selects sin registros*/
-select * from [dbo].[parkingLot]
 select * from [dbo].[reservation]
-select * from [dbo].[parkingSpace]
 /*
+select * from [dbo].[parkingSpace]
+select * from [dbo].[parkingLot]
 select * from [dbo].[provider]
 select * from [dbo].[user]
 select * from [dbo].[department]

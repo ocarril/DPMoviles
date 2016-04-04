@@ -1,8 +1,8 @@
 ﻿<%@ ServiceHost 
 Language="C#" 
 Debug="true" 
-Service="slnWcfRestServiceParking.Users"
-CodeBehind="Users.svc.cs"
+Service="slnWcfRestServiceParking.Parking" 
+CodeBehind="Parking.svc.cs" 
 Factory="System.ServiceModel.Activation.WebServiceHostFactory"
 %>
 

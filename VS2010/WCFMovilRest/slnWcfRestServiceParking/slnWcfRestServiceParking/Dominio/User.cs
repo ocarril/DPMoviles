@@ -9,6 +9,12 @@ namespace slnWcfRestServiceParking.Dominio
     [DataContract]
     public class User
     {
+        public User()
+        {
+            lstProvider = new List<Provider>();
+            lstReservation = new List<Reservation>();
+        }
+
         [DataMember]
         public int userID { get; set; }
         [DataMember]
@@ -23,5 +29,10 @@ namespace slnWcfRestServiceParking.Dominio
         public DateTime registerDate { get; set; }
         [DataMember]
         public bool status { get; set; }
+
+        [DataMember]
+        public List<Provider> lstProvider { get; set; }
+        [DataMember]
+        public List<Reservation> lstReservation { get; set; }
     }
 }
