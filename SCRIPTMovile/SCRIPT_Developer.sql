@@ -34,10 +34,11 @@ select * from [dbo].[user]
 select * from [dbo].[department]
 select * from [dbo].[province] p where p.departmentId=15
 select * from [dbo].[disctrict]p where p.provinceId=127
-
+select * from [dbo].[reservation] R WHERE R.UserID=2
 /*Selects sin registros*/
-select * from [dbo].[reservation]
+
 /*
+select * from [dbo].[reservation]
 select * from [dbo].[parkingSpace]
 select * from [dbo].[parkingLot]
 select * from [dbo].[provider]

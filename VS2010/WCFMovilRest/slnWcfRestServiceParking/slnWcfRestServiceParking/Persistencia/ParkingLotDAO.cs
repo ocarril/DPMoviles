@@ -92,7 +92,7 @@ namespace slnWcfRestServiceParking.Persistencia
                             status = item.provider.status,
                             userID = item.provider.userID
                         };
-                        objParkingLot.lstParkingSpace = getParkingSpace(item.parkingLotID);
+                        objParkingLot.lstParkingSpace = getParkingPlaceByLot(item.parkingLotID.ToString());
                         lstParkingLot.Add(objParkingLot);
                     }
                 };
@@ -136,7 +136,6 @@ namespace slnWcfRestServiceParking.Persistencia
                                          pl.name,
                                          pl.openTime,
                                          pl.parkingLotID,
-                                         //pl.parkingSpaces,
                                          pl.priceHour,
                                          pl.provider,
                                          pl.providerID,
@@ -182,7 +181,7 @@ namespace slnWcfRestServiceParking.Persistencia
                             status = item.provider.status,
                             userID = item.provider.userID
                         };
-                        objParkingLot.lstParkingSpace = getParkingSpace(item.parkingLotID);
+                        objParkingLot.lstParkingSpace = getParkingPlaceByLot(item.parkingLotID.ToString());
                     }
                 };
             }
@@ -192,15 +191,14 @@ namespace slnWcfRestServiceParking.Persistencia
             }
             return objParkingLot;
         }
-     
-        private List<ParkingSpace> getParkingSpace(int parkingLotID)
+
+        public List<ParkingSpace> getParkingPlaceByLot(string parkingLotID)
         {
             List<ParkingSpace> lstParkingSpace = new List<ParkingSpace>();
             using (ParkingDataClassesDataContext SQLDC = new ParkingDataClassesDataContext(cadenaConexion))
             {
                 var result = from pl in SQLDC.parkingSpaces
-                             where pl.parkingLotID == parkingLotID
-
+                             where pl.parkingLotID == (string.IsNullOrEmpty(parkingLotID)?0:Convert.ToInt32(parkingLotID))
                              select pl;
 
                 foreach (parkingSpace parkSpa in result)
@@ -216,5 +214,47 @@ namespace slnWcfRestServiceParking.Persistencia
             
             return lstParkingSpace;
         }
+
+        public List<Reservation> getReservationByUser(string pEmail)
+        {
+            List<Reservation> lstReservation = new List<Reservation>();
+            try
+            {
+
+                using (ParkingDataClassesDataContext SQLDC = new ParkingDataClassesDataContext(cadenaConexion))
+                {
+                    var objUser = from result in SQLDC.users
+                                  where result.email.IndexOf(pEmail) > -1
+                                  select new
+                                  {
+                                      result.userID
+                                  };
+
+                    var lstReser = from rs in SQLDC.reservations
+                                 where rs.userID == objUser.SingleOrDefault().userID
+                                 select rs;
+
+                    foreach (reservation objReservation in lstReser)
+                    {
+                        Reservation objreservation = new Reservation();
+                        objreservation.parkingSpaceID = objReservation.parkingSpaceID;
+                        objreservation.dateReservation = objReservation.dateReservation;
+                        objreservation.finishParking = objReservation.finishParking;
+                        objreservation.reservationID = objReservation.reservationID;
+                        objreservation.startParking = objReservation.startParking;
+                        objreservation.userID = objReservation.userID;
+                        objreservation.status = objReservation.status;
+                        lstReservation.Add(objreservation);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return lstReservation;
+        }
+
     }
 }

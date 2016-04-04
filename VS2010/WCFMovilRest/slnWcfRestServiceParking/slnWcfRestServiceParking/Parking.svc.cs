@@ -24,5 +24,16 @@ namespace slnWcfRestServiceParking
         {
             return objParkingLotDAO.getParkingLot(ParkingLotID);
         }
+
+        public List<ParkingSpace> getParkingPlaceByLot(string parkingLotID)
+        {
+            return objParkingLotDAO.getParkingPlaceByLot(parkingLotID);
+        }
+
+        public List<Reservation> getReservationByUser(string pEmail)
+        {
+            return objParkingLotDAO.getReservationByUser(pEmail);
+        }
+
     }
 }

@@ -27,5 +27,19 @@ namespace slnWcfRestServiceParking
                    RequestFormat = WebMessageFormat.Json,
                    ResponseFormat = WebMessageFormat.Json)]
         ParkingLot getParkingLot(string parkingLotID);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+                   UriTemplate = "getParkingPlaceByLot/{parkingLotID}",
+                   RequestFormat = WebMessageFormat.Json,
+                   ResponseFormat = WebMessageFormat.Json)]
+        List<ParkingSpace> getParkingPlaceByLot(string parkingLotID);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
+                   UriTemplate = "getReservationByUser/{email}",
+                   RequestFormat = WebMessageFormat.Json,
+                   ResponseFormat = WebMessageFormat.Json)]
+        List<Reservation> getReservationByUser(string email);
     }
 }
