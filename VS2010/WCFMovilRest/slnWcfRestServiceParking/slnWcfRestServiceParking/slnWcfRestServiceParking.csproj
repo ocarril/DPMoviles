@@ -77,7 +77,7 @@
     <Compile Include="Dominio\Reservation.cs" />
     <Compile Include="Dominio\User.cs" />
     <Compile Include="Interfaces\IUsers.cs" />
-    <Compile Include="IParking.cs" />
+    <Compile Include="Interfaces\IParking.cs" />
     <Compile Include="Parking.svc.cs">
       <DependentUpon>Parking.svc</DependentUpon>
     </Compile>
