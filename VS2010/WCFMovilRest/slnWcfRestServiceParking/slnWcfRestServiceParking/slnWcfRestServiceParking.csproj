@@ -87,6 +87,9 @@
       <DependentUpon>ParkingDataClasses.dbml</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\ParkingLotDAO.cs" />
+    <Compile Include="Persistencia\ParkingSpaceDAO.cs" />
+    <Compile Include="Persistencia\ProviderDAO.cs" />
+    <Compile Include="Persistencia\ReservationDAO.cs" />
     <Compile Include="Persistencia\UserDAO.cs" />
     <Compile Include="Persistencia\UtilConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

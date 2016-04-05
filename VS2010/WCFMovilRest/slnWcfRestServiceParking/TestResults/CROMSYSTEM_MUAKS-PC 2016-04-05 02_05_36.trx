@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="375d606f-dcfd-4e41-9628-d83cffdaeaaf" name="CROMSYSTEM@MUAKS-PC 2016-04-05 02:05:36" runUser="MUAKS-PC\CROMSYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="cdeb153d-5496-4227-b58f-5b1ef5546c2b">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="CROMSYSTEM_MUAKS-PC 2016-04-05 02_05_36" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-05T02:05:36.2500000-05:00" queuing="2016-04-05T02:05:45.3828125-05:00" start="2016-04-05T02:05:46.1259766-05:00" finish="2016-04-05T02:06:18.8974609-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ReservationUpdateTest" storage="f:\cromsistemas\vs2012\dpmoviles\vs2010\wcfmovilrest\slnwcfrestserviceparking\slnwcfrestserviceparkingtest\bin\debug\slnwcfrestserviceparkingtest.dll" id="85ad8b83-aefe-39d8-c009-a5ccc5ff2d57">
+      <Execution id="108d8f6d-bbcb-40ac-ba88-0e91b38cdaa3" />
+      <TestMethod codeBase="F:/CROMSistemas/VS2012/DPMoviles/VS2010/WCFMovilRest/slnWcfRestServiceParking/slnWcfRestServiceParkingTest/bin/Debug/slnWcfRestServiceParkingTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="slnWcfRestServiceParkingTest.ReservationTest, slnWcfRestServiceParkingTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReservationUpdateTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="85ad8b83-aefe-39d8-c009-a5ccc5ff2d57" executionId="108d8f6d-bbcb-40ac-ba88-0e91b38cdaa3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="108d8f6d-bbcb-40ac-ba88-0e91b38cdaa3" testId="85ad8b83-aefe-39d8-c009-a5ccc5ff2d57" testName="ReservationUpdateTest" computerName="MUAKS-PC" duration="00:00:24.5057691" startTime="2016-04-05T02:05:47.4716797-05:00" endTime="2016-04-05T02:06:17.4482422-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="108d8f6d-bbcb-40ac-ba88-0e91b38cdaa3">
+    </UnitTestResult>
+  </Results>
+</TestRun>

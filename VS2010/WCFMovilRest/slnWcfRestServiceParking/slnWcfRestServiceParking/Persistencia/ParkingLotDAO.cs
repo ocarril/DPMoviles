@@ -231,8 +231,8 @@ namespace slnWcfRestServiceParking.Persistencia
                                   };
 
                     var lstReser = from rs in SQLDC.reservations
-                                 where rs.userID == objUser.SingleOrDefault().userID
-                                 select rs;
+                                   where rs.userID == objUser.SingleOrDefault().userID
+                                   select rs;
 
                     foreach (reservation objReservation in lstReser)
                     {
