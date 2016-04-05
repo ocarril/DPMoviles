@@ -36,6 +36,11 @@ namespace slnWcfRestServiceParking
             return objUserDAO.registerUser(objUser);
         }
 
+        public string updateUser(User objUser)
+        {
+            return objUserDAO.updateUser(objUser);
+        }
+
         public User findUser(string userID)
         {
             return objUserDAO.FindUser(userID);

@@ -64,10 +64,10 @@ namespace slnWcfRestServiceParkingTest
         {
             User objUser = new User
              {
-                 email = "kgutierrez@gmail.com",
+                 email = "pgutierrez@gmail.com",
                  lastName = "GUTIERREZ",
                  name = "Juan",
-                 userID = 99,
+                 userID = 0,
                  registerDate = DateTime.Now,
                  status = true,
                  password = "1234"
@@ -75,17 +75,52 @@ namespace slnWcfRestServiceParkingTest
             JavaScriptSerializer jsx = new JavaScriptSerializer();
             string postdata = jsx.Serialize(objUser);
             byte[] data = Encoding.UTF8.GetBytes(postdata);
+            HttpWebRequest req = (HttpWebRequest)WebRequest
+                .Create("http://localhost:3643/Users.svc/Users");
 
+            req.Method = "POST";
+            req.ContentLength = data.Length;
+            req.ContentType = "application/json; charset=utf-8";
+            var reqStream = req.GetRequestStream();
+            reqStream.Write(data, 0, data.Length);
+            var res = (HttpWebResponse)req.GetResponse();
+            StreamReader reader = new StreamReader(res.GetResponseStream());
+            string userJson = reader.ReadToEnd();
+
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            string userCreado = js.Deserialize<string>(userJson);
+
+            if (userCreado == "0")
+                Assert.AreEqual("0", userCreado);
+            else if (userCreado == "2")
+                Assert.AreEqual("2", userCreado);
+
+        }
+
+        [TestMethod]
+        public void UserEditarTest()
+        {
+            User objUser = new User
+            {
+                email = "pgutierrez@gmail.com",
+                lastName = "GUTIERREZ SANCHEZ",
+                name = "Juan juliossss",
+                userID = 22,
+                registerDate = DateTime.Now,
+                status = true,
+                password = "1234"
+            };
+            JavaScriptSerializer jsx = new JavaScriptSerializer();
+            string postdata = jsx.Serialize(objUser);
+            byte[] data = Encoding.UTF8.GetBytes(postdata);
             HttpWebRequest req = (HttpWebRequest)WebRequest
                 .Create("http://localhost:3643/Users.svc/Users");
 
             req.Method = "PUT";
             req.ContentLength = data.Length;
             req.ContentType = "application/json; charset=utf-8";
-
             var reqStream = req.GetRequestStream();
             reqStream.Write(data, 0, data.Length);
-
             var res = (HttpWebResponse)req.GetResponse();
             StreamReader reader = new StreamReader(res.GetResponseStream());
             string userJson = reader.ReadToEnd();

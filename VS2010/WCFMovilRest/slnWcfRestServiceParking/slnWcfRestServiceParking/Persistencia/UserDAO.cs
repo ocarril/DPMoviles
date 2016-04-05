@@ -109,6 +109,31 @@ namespace slnWcfRestServiceParking.Persistencia
             }
             return objMesaje;
         }
-       
+
+        public string updateUser(User objUser)
+        {
+            string objMesaje = "-1";
+            try
+            {
+                using (var sql = new ParkingDataClassesDataContext(cadenaConexion))
+                {
+                    var objuser = sql.users.Single(x => x.userID == objUser.userID);
+
+                    objuser.email = objUser.email;
+                    objuser.lastName = objUser.lastName;
+                    objuser.name = objUser.name;
+                    objuser.password = objUser.password;
+                    objuser.registerDate = objUser.registerDate;
+                    objuser.status = true;
+                    sql.SubmitChanges();
+                    objMesaje = "0";
+                };
+            }
+            catch (Exception ex)
+            {
+                objMesaje = ex.Message;
+            }
+            return objMesaje;
+        }
     }
 }

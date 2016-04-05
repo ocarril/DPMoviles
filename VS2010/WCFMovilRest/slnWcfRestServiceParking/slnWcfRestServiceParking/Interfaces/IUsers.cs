@@ -19,11 +19,18 @@ namespace slnWcfRestServiceParking
         string ObtenerSaludo();
 
         [OperationContract]
-        [WebInvoke(Method = "PUT",
+        [WebInvoke(Method = "POST",
                    UriTemplate = "Users",
                    ResponseFormat = WebMessageFormat.Json,
                    RequestFormat = WebMessageFormat.Json)]
         string registerUser(User objUser);
+
+        [OperationContract]
+        [WebInvoke(Method = "PUT",
+                   UriTemplate = "Users",
+                   ResponseFormat = WebMessageFormat.Json,
+                   RequestFormat = WebMessageFormat.Json)]
+        string updateUser(User objUser);
 
         [OperationContract]
         [WebInvoke(Method = "GET",
