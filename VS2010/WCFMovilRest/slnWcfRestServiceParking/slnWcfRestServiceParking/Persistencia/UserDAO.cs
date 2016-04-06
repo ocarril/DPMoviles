@@ -35,7 +35,7 @@ namespace slnWcfRestServiceParking.Persistencia
                             lastName = item.lastName,
                             name = item.name,
                             password = item.password,
-                            registerDate = item.registerDate.HasValue ? item.registerDate.Value : DateTime.Now,
+                            registerDate = item.registerDate.HasValue ? item.registerDate.Value.ToString() : DateTime.Now.ToString(),
                             status = item.status,
                             userID = item.userID
                         };
@@ -68,7 +68,7 @@ namespace slnWcfRestServiceParking.Persistencia
                             lastName = item.lastName,
                             name = item.name,
                             password = item.password,
-                            registerDate = item.registerDate.HasValue ? item.registerDate.Value : DateTime.Now,
+                            registerDate = item.registerDate.HasValue ? item.registerDate.Value.ToString() : DateTime.Now.ToString(),
                             status = item.status,
                             userID = item.userID
                         };
@@ -123,7 +123,7 @@ namespace slnWcfRestServiceParking.Persistencia
                     objuser.lastName = objUser.lastName;
                     objuser.name = objUser.name;
                     objuser.password = objUser.password;
-                    objuser.registerDate = objUser.registerDate;
+                    objuser.registerDate = ConvertirAFecha(objUser.registerDate);
                     objuser.status = true;
                     sql.SubmitChanges();
                     objMesaje = "0";
@@ -134,6 +134,20 @@ namespace slnWcfRestServiceParking.Persistencia
                 objMesaje = ex.Message;
             }
             return objMesaje;
+        }
+
+        private DateTime ConvertirAFecha(string datoFecha)
+        {
+            DateTime fechaDevuelta = DateTime.Now;
+            try
+            {
+                fechaDevuelta = Convert.ToDateTime(datoFecha);
+            }
+            catch (Exception)
+            {
+                fechaDevuelta = DateTime.Now;
+            }
+            return fechaDevuelta;
         }
     }
 }

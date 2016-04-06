@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="F:\CROMSistemas\VS2012\DPMoviles\WCFMovilRest\PublishREST" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="bin/slnWcfRestServiceParking.pdb" publishTime="04/05/2016 17:09:11" />
+    <file relUrl="Web.config" publishTime="04/05/2016 20:23:01" />
     <file relUrl="Users.svc" publishTime="04/02/2016 22:02:46" />
-    <file relUrl="bin/slnWcfRestServiceParking.dll" publishTime="04/05/2016 17:09:11" />
+    <file relUrl="bin/slnWcfRestServiceParking.dll" publishTime="04/05/2016 20:22:53" />
     <file relUrl="Parking.svc" publishTime="04/03/2016 20:29:44" />
-    <file relUrl="Web.config" publishTime="04/05/2016 17:09:24" />
+    <file relUrl="bin/slnWcfRestServiceParking.pdb" publishTime="04/05/2016 20:22:53" />
   </publishProfile>
 </publishData>

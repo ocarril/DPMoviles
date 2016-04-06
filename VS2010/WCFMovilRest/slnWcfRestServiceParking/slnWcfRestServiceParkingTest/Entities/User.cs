@@ -13,7 +13,7 @@ namespace slnWcfRestServiceParkingTest
         public string lastName { get; set; }
         public string email { get; set; }
         public string password { get; set; }
-        public DateTime registerDate { get; set; }
+        public string registerDate { get; set; }
         public bool status { get; set; }
     }
 }

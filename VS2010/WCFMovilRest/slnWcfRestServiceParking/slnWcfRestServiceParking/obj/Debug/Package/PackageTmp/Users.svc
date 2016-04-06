@@ -1,8 +1,0 @@
-﻿<%@ ServiceHost 
-Language="C#" 
-Debug="true" 
-Service="slnWcfRestServiceParking.Users"
-CodeBehind="Users.svc.cs"
-Factory="System.ServiceModel.Activation.WebServiceHostFactory"
-%>
-

@@ -26,6 +26,16 @@ go
 EXEC sp_rename '[dbo].[province].nombre', 'name', 'COLUMN';
 GO
 
+alter table [dbo].[reservation]
+alter column [startParking] varchar(20);
+
+alter table [dbo].[reservation]
+alter column [finishParking] varchar(20);
+
+select convert([startParking], datetime) from [dbo].[reservation]
+
+select * from [dbo].[reservation]
+
 select * from [dbo].[parkingLot]
 select * from [dbo].[parkingSpace] pl where pl.parkingLotID=1
 

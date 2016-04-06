@@ -26,7 +26,7 @@ namespace slnWcfRestServiceParking.Dominio
         [DataMember]
         public string password { get; set; }
         [DataMember]
-        public DateTime registerDate { get; set; }
+        public string registerDate { get; set; }
         [DataMember]
         public bool status { get; set; }
 

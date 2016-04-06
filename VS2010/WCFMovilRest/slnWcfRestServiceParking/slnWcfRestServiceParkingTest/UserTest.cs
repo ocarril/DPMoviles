@@ -64,11 +64,11 @@ namespace slnWcfRestServiceParkingTest
         {
             User objUser = new User
              {
-                 email = "pgutierrez@gmail.com",
+                 email = "agutierrez@gmail.com",
                  lastName = "GUTIERREZ",
-                 name = "Juan",
+                 name = "Abel Juan",
                  userID = 0,
-                 registerDate = DateTime.Now,
+                 //registerDate = DateTime.Now.ToString(),
                  status = true,
                  password = "1234"
              };
@@ -102,11 +102,11 @@ namespace slnWcfRestServiceParkingTest
         {
             User objUser = new User
             {
-                email = "pgutierrez@gmail.com",
+                email = "qgutierrez@gmail.com",
                 lastName = "GUTIERREZ SANCHEZ",
                 name = "Juan juliossss",
                 userID = 22,
-                registerDate = DateTime.Now,
+                registerDate = DateTime.Now.ToString(),
                 status = true,
                 password = "1234"
             };
