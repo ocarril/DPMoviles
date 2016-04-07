@@ -26,13 +26,35 @@ go
 EXEC sp_rename '[dbo].[province].nombre', 'name', 'COLUMN';
 GO
 
+/*Inicio de cambio de campos*/
 alter table [dbo].[reservation]
 alter column [startParking] varchar(20);
 
 alter table [dbo].[reservation]
 alter column [finishParking] varchar(20);
 
-select convert([startParking], datetime) from [dbo].[reservation]
+select 
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, [startParking] ) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, [startParking] ) )))),2) 
+,right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, [finishParking]) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, [finishParking]) )))),2) 
+from [dbo].[reservation]
+
+update [dbo].[reservation]
+set
+ [startParking] = right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, [startParking] ) )))),2) +':'+
+				  right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, [startParking] ) )))),2) 
+,[finishParking]= right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, [finishParking]) )))),2) +':'+
+				  right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, [finishParking]) )))),2) 
+
+
+alter table [dbo].[reservation]
+alter column [startParking] varchar(5);
+
+alter table [dbo].[reservation]
+alter column [finishParking] varchar(5);
+
+/*Fin de cambio de campos*/
 
 select * from [dbo].[reservation]
 

@@ -17,8 +17,8 @@ namespace slnWcfRestServiceParkingTest
         public int parkingSpaceID { get; set; }
         public int userID { get; set; }
         public DateTime dateReservation { get; set; }
-        public DateTime startParking { get; set; }
-        public DateTime finishParking { get; set; }
+        public string startParking { get; set; }
+        public string finishParking { get; set; }
         public bool status { get; set; }
 
         public ParkingSpace objParkingSpace { get; set; }

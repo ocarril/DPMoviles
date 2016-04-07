@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14, 10.625" name="ParkingDataClasses">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.875, 10.625" name="ParkingDataClasses">
   <DataContextMoniker Name="/ParkingDataClassesDataContext" />
   <nestedChildShapes>
     <classShape Id="23820ecf-4d05-4276-9047-775709f4482a" absoluteBounds="1.5, 9.125, 2, 1.1939925130208344">
@@ -44,27 +44,21 @@
         <elementListCompartment Id="985ef78e-5024-4519-b303-3063890ca918" absoluteBounds="0.765, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="98edc8c0-6209-4653-828c-87959983ed18" absoluteBounds="11.75, 1.625, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/ParkingDataClassesDataContext/reservation" />
-      <nestedChildShapes>
-        <elementListCompartment Id="9e927371-4cd0-4435-bdbd-ce7720c5d118" absoluteBounds="11.765, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(5.5 : 6.69314697265625); (7.25 : 6.69314697265625); (7.25 : 4.50160970052083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 6.69314697265625); (7.25 : 6.69314697265625); (7.25 : 4.50160970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/disctrict/disctrict_parkingLot" />
       <nodes>
         <classShapeMoniker Id="365396fd-fb71-4b0c-9230-ce3e3526fdaf" />
         <classShapeMoniker Id="7a2ba1fb-eb08-4ea1-96f4-06dc426546b0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 2.78929768880208); (9 : 2.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 2.78929768880208); (9 : 2.78929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/parkingLot/parkingLot_parkingSpace" />
       <nodes>
         <classShapeMoniker Id="7a2ba1fb-eb08-4ea1-96f4-06dc426546b0" />
         <classShapeMoniker Id="823e8e41-c57e-4846-9bc8-e2c020b3dead" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 2.69314697265625); (6.25 : 2.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 2.69314697265625); (6.25 : 2.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/provider/provider_parkingLot" />
       <nodes>
         <classShapeMoniker Id="9208c1ec-d3ed-4d25-9d0c-0a2f45605efc" />
@@ -78,32 +72,38 @@
         <classShapeMoniker Id="9208c1ec-d3ed-4d25-9d0c-0a2f45605efc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 6.69314697265625); (3.5 : 6.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 6.69314697265625); (3.5 : 6.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/province/province_disctrict" />
       <nodes>
         <classShapeMoniker Id="c4597ad3-57d8-49d1-83ca-333dff499949" />
         <classShapeMoniker Id="365396fd-fb71-4b0c-9230-ce3e3526fdaf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.125 : 9.125); (2.125 : 7.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.125 : 9.125); (2.125 : 7.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/department/department_province" />
       <nodes>
         <classShapeMoniker Id="23820ecf-4d05-4276-9047-775709f4482a" />
         <classShapeMoniker Id="c4597ad3-57d8-49d1-83ca-333dff499949" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11 : 2.78929768880208); (11.75 : 2.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <classShape Id="0b9b9e06-4c97-4012-adf7-0e8a724d73a1" absoluteBounds="12.625, 1.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ParkingDataClassesDataContext/reservation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64414fbf-c66e-4aad-9309-b1a62cc2cdad" absoluteBounds="12.64, 1.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11 : 2.78929768880208); (12.625 : 2.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/parkingSpace/parkingSpace_reservation" />
       <nodes>
         <classShapeMoniker Id="823e8e41-c57e-4846-9bc8-e2c020b3dead" />
-        <classShapeMoniker Id="98edc8c0-6209-4653-828c-87959983ed18" />
+        <classShapeMoniker Id="0b9b9e06-4c97-4012-adf7-0e8a724d73a1" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 3.26807532356771); (3.25 : 3.26807532356771); (3.25 : 0.75); (12.75 : 0.75); (12.75 : 1.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 3.26807532356771); (3.25 : 3.26807532356771); (3.25 : 0.75); (13.625 : 0.75); (13.625 : 1.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/ParkingDataClassesDataContext/user/user_reservation" />
       <nodes>
         <classShapeMoniker Id="67dc485a-db79-403e-902f-a341e99666a7" />
-        <classShapeMoniker Id="98edc8c0-6209-4653-828c-87959983ed18" />
+        <classShapeMoniker Id="0b9b9e06-4c97-4012-adf7-0e8a724d73a1" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

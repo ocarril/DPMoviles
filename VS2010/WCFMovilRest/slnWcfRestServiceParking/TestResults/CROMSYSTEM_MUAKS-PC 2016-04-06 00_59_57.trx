@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1243d611-555e-45cd-84b1-54feca7d717d" name="CROMSYSTEM@MUAKS-PC 2016-04-06 00:59:57" runUser="MUAKS-PC\CROMSYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="cdeb153d-5496-4227-b58f-5b1ef5546c2b">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="CROMSYSTEM_MUAKS-PC 2016-04-06 00_59_57" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-06T00:59:57.2988281-05:00" queuing="2016-04-06T01:00:03.0195312-05:00" start="2016-04-06T01:00:03.3691406-05:00" finish="2016-04-06T01:01:24.5224609-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ReservationCrearTest" storage="f:\cromsistemas\vs2012\dpmoviles\vs2010\wcfmovilrest\slnwcfrestserviceparking\slnwcfrestserviceparkingtest\bin\debug\slnwcfrestserviceparkingtest.dll" id="e5fba11d-e010-544f-b854-10fbedece64a">
+      <Execution id="567e9e59-52fe-41d1-8482-42a63c7fdd86" />
+      <TestMethod codeBase="F:/CROMSistemas/VS2012/DPMoviles/VS2010/WCFMovilRest/slnWcfRestServiceParking/slnWcfRestServiceParkingTest/bin/Debug/slnWcfRestServiceParkingTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="slnWcfRestServiceParkingTest.ReservationTest, slnWcfRestServiceParkingTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReservationCrearTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e5fba11d-e010-544f-b854-10fbedece64a" executionId="567e9e59-52fe-41d1-8482-42a63c7fdd86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="567e9e59-52fe-41d1-8482-42a63c7fdd86" testId="e5fba11d-e010-544f-b854-10fbedece64a" testName="ReservationCrearTest" computerName="MUAKS-PC" duration="00:01:18.4721452" startTime="2016-04-06T01:00:03.7402343-05:00" endTime="2016-04-06T01:01:24.1835937-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="567e9e59-52fe-41d1-8482-42a63c7fdd86">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method slnWcfRestServiceParkingTest.ReservationTest.ReservationCrearTest threw exception: 
+System.Net.WebException: No es posible conectar con el servidor remoto ---&gt; System.Net.Sockets.SocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3643</Message>
+          <StackTrace>    en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket&amp; socket, IPAddress&amp; address, ConnectSocketState state, IAsyncResult asyncResult, Exception&amp; exception)
+ --- End of inner exception stack trace ---
+    en System.Net.HttpWebRequest.GetRequestStream(TransportContext&amp; context)
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en slnWcfRestServiceParkingTest.ReservationTest.ReservationCrearTest() en F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParkingTest\ReservationTest.cs:línea 44
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

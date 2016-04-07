@@ -6,6 +6,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net;
 using System.IO;
 using System.Web.Script.Serialization;
+using System.Threading;
+using System.Globalization;
 
 namespace slnWcfRestServiceParkingTest
 {
@@ -20,12 +22,13 @@ namespace slnWcfRestServiceParkingTest
         [TestMethod]
         public void ReservationCrearTest()
         {
+            ActivarCultura();
             Reservation objReservation = new Reservation
              {
                  dateReservation = DateTime.Now,
-                 startParking = DateTime.Now.AddHours(2),
-                 finishParking = DateTime.Now.AddHours(5),
-                 userID = 3,
+                 startParking = DateTime.Now.AddHours(2).ToShortTimeString().Substring(0,5),
+                 finishParking = DateTime.Now.AddHours(5).ToShortTimeString().Substring(0, 5),
+                 userID = 1,
                  parkingSpaceID = 85,
                  status = true,
                  reservationID = 0
@@ -64,8 +67,8 @@ namespace slnWcfRestServiceParkingTest
             Reservation objReservation = new Reservation
             {
                 dateReservation = DateTime.Now,
-                startParking = DateTime.Now.AddHours(3),
-                finishParking = DateTime.Now.AddHours(6),
+                startParking = DateTime.Now.AddHours(3).ToShortTimeString(),
+                finishParking = DateTime.Now.AddHours(6).ToShortTimeString(),
                 userID = 3,
                 parkingSpaceID = 99,
                 status = true,
@@ -122,6 +125,25 @@ namespace slnWcfRestServiceParkingTest
             else if (reservationEliminado.Length > 2)
                 Assert.AreNotEqual("2", reservationEliminado);
 
+        }
+
+        private void ActivarCultura()
+        {
+            string cultura = "es-PE";
+            string cantDec = "2";
+            CultureInfo CulturadeUsuario = new CultureInfo(cultura, true);
+            CultureInfo CultureSystema = (CultureInfo)CulturadeUsuario.Clone();
+            CulturadeUsuario.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+            CultureSystema.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+            CultureSystema.DateTimeFormat.ShortTimePattern = "HH:mm";
+            CultureSystema.DateTimeFormat.LongTimePattern = "HH:mm:ss";
+            CultureSystema.DateTimeFormat.FirstDayOfWeek = DayOfWeek.Monday;
+            CultureSystema.NumberFormat.NumberGroupSeparator = ",";
+            CultureSystema.NumberFormat.NumberDecimalSeparator = ".";
+            CultureSystema.NumberFormat.NumberDecimalDigits = Convert.ToInt16(cantDec);
+            CultureSystema.NumberFormat.NumberNegativePattern = 1;
+
+            Thread.CurrentThread.CurrentCulture = CultureSystema;
         }
     }
 }

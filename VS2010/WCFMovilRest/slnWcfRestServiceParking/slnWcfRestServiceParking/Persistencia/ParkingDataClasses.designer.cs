@@ -57,7 +57,7 @@ namespace slnWcfRestServiceParking.Persistencia
     #endregion
 		
 		public ParkingDataClassesDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DB_9FA6E8_parkingResBDConnectionString1"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DB_9FA6E8_parkingResBDConnectionStringXX"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1765,9 +1765,9 @@ namespace slnWcfRestServiceParking.Persistencia
 		
 		private System.DateTime _dateReservation;
 		
-		private System.DateTime _startParking;
+		private string _startParking;
 		
-		private System.DateTime _finishParking;
+		private string _finishParking;
 		
 		private bool _status;
 		
@@ -1787,9 +1787,9 @@ namespace slnWcfRestServiceParking.Persistencia
     partial void OnuserIDChanged();
     partial void OndateReservationChanging(System.DateTime value);
     partial void OndateReservationChanged();
-    partial void OnstartParkingChanging(System.DateTime value);
+    partial void OnstartParkingChanging(string value);
     partial void OnstartParkingChanged();
-    partial void OnfinishParkingChanging(System.DateTime value);
+    partial void OnfinishParkingChanging(string value);
     partial void OnfinishParkingChanged();
     partial void OnstatusChanging(bool value);
     partial void OnstatusChanged();
@@ -1890,8 +1890,8 @@ namespace slnWcfRestServiceParking.Persistencia
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_startParking", DbType="DateTime NOT NULL")]
-		public System.DateTime startParking
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_startParking", DbType="VarChar(5)")]
+		public string startParking
 		{
 			get
 			{
@@ -1910,8 +1910,8 @@ namespace slnWcfRestServiceParking.Persistencia
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_finishParking", DbType="DateTime NOT NULL")]
-		public System.DateTime finishParking
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_finishParking", DbType="VarChar(5)")]
+		public string finishParking
 		{
 			get
 			{

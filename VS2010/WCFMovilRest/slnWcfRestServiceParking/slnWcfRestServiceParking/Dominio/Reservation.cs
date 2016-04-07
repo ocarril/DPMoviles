@@ -23,9 +23,9 @@ namespace slnWcfRestServiceParking.Dominio
         [DataMember]
         public DateTime dateReservation { get; set; }
         [DataMember]
-        public DateTime startParking { get; set; }
+        public string startParking { get; set; }
         [DataMember]
-        public DateTime finishParking { get; set; }
+        public string finishParking { get; set; }
         [DataMember]
         public bool status { get; set; }
 

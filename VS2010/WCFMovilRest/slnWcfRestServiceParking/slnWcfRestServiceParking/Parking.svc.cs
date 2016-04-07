@@ -7,12 +7,35 @@ using System.Text;
 
 using slnWcfRestServiceParking.Dominio;
 using slnWcfRestServiceParking.Persistencia;
+using System.Globalization;
+using System.Configuration;
+using System.Threading;
 
 namespace slnWcfRestServiceParking
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Parking" in code, svc and config file together.
     public class Parking : IParking
     {
+        public Parking()
+        {
+
+            string cultura = "es-PE";
+            string cantDec = "2";
+            CultureInfo CulturadeUsuario = new CultureInfo(cultura, true);
+            CultureInfo CultureSystema = (CultureInfo)CulturadeUsuario.Clone();
+            CulturadeUsuario.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+            CultureSystema.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+            CultureSystema.DateTimeFormat.ShortTimePattern = "HH:mm";
+            CultureSystema.DateTimeFormat.LongTimePattern = "HH:mm:ss";
+            CultureSystema.DateTimeFormat.FirstDayOfWeek = DayOfWeek.Monday;
+            CultureSystema.NumberFormat.NumberGroupSeparator = ",";
+            CultureSystema.NumberFormat.NumberDecimalSeparator = ".";
+            CultureSystema.NumberFormat.NumberDecimalDigits = Convert.ToInt16(cantDec);
+            CultureSystema.NumberFormat.NumberNegativePattern = 1;
+
+            Thread.CurrentThread.CurrentCulture = CultureSystema;
+        }
+
         private ParkingLotDAO objParkingLotDAO = new ParkingLotDAO();
         private ReservationDAO objReservationDAO = new ReservationDAO();
         private ParkingSpaceDAO objParkingSpaceDAO = new ParkingSpaceDAO();

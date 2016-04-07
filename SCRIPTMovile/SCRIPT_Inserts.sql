@@ -2525,8 +2525,8 @@ VALUES
 (15,'K 01',1)
 ;
 
-SELECT * FROM [dbo].[parkingSpace]
-SELECT * FROM [dbo].[user]
+--SELECT * FROM [dbo].[parkingSpace]
+--SELECT * FROM [dbo].[user]
 
 INSERT INTO [dbo].[reservation](
 [parkingSpaceID],[userID],[dateReservation],[startParking],[finishParking],[status])
@@ -2534,9 +2534,11 @@ select
 ps.[parkingSpaceID], 
 us.[userID], 
 getdate(),
-DATEADD(hour,3,getdate()),
-DATEADD(hour,6,getdate()),
-1
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,3,getdate()) ) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,3,getdate()) ) )))),2) 
+,right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,6,getdate())) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,6,getdate())) )))),2) 
+,1
 from
 [dbo].[parkingSpace] ps,
 [dbo].[user]		 us
@@ -2549,9 +2551,11 @@ select
 ps.[parkingSpaceID], 
 us.[userID], 
 getdate()-1,
-DATEADD(hour,-3,getdate()),
-DATEADD(hour,02,getdate()),
-1
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,-3,getdate()) ) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,-3,getdate()) ) )))),2) 
+,right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,02,getdate())) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,02,getdate())) )))),2) 
+,1
 from
 [dbo].[parkingSpace] ps,
 [dbo].[user]		 us
@@ -2565,9 +2569,11 @@ select
 ps.[parkingSpaceID], 
 us.[userID], 
 getdate()+1,
-DATEADD(hour,5,getdate()),
-DATEADD(hour,9,getdate()),
-1
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,5,getdate()) ) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,5,getdate()) ) )))),2) 
+,right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,9,getdate())) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,9,getdate())) )))),2) 
+,1
 from
 [dbo].[parkingSpace] ps,
 [dbo].[user]		 us
@@ -2581,9 +2587,11 @@ select
 ps.[parkingSpaceID], 
 us.[userID], 
 getdate()+2,
-DATEADD(hour,-4,getdate()),
-DATEADD(hour,-1,getdate()),
-1
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,-4,getdate()) ) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,-4,getdate()) ) )))),2) 
+,right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,-1,getdate())) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,-1,getdate())) )))),2) 
+,1
 from
 [dbo].[parkingSpace] ps,
 [dbo].[user]		 us
@@ -2597,9 +2605,11 @@ select
 ps.[parkingSpaceID], 
 us.[userID], 
 getdate()+4,
-DATEADD(hour,-1,getdate()),
-DATEADD(hour,4,getdate()),
-1
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,-1,getdate()) ) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,-1,getdate()) ) )))),2) 
+,right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( hour ,   convert(datetime, DATEADD(hour,+4,getdate())) )))),2) +':'+
+ right('00'+ltrim(rtrim(convert(varchar(10), DATEPART ( minute , convert(datetime, DATEADD(hour,+4,getdate())) )))),2) 
+,1
 from
 [dbo].[parkingSpace] ps,
 [dbo].[user]		 us
