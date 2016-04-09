@@ -18,6 +18,13 @@ namespace slnWcfRestServiceParking
 
         [OperationContract]
         [WebInvoke(Method = "GET",
+                   UriTemplate = "getParkingLotsD/",
+                   RequestFormat = WebMessageFormat.Json,
+                   ResponseFormat = WebMessageFormat.Json)]
+        DocParkingLot getParkingLotsD();
+
+        [OperationContract]
+        [WebInvoke(Method = "GET",
                    UriTemplate = "getParkingLots/",
                    RequestFormat = WebMessageFormat.Json,
                    ResponseFormat = WebMessageFormat.Json)]

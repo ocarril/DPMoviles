@@ -28,7 +28,7 @@ namespace slnWcfRestServiceParking.Dominio
         [DataMember]
         public string registerDate { get; set; }
         [DataMember]
-        public bool status { get; set; }
+        public string status { get; set; }
 
         [DataMember]
         public List<Provider> lstProvider { get; set; }

@@ -64,20 +64,20 @@ namespace slnWcfRestServiceParkingTest
         {
             User objUser = new User
              {
-                 email = "agutierrez@gmail.com",
+                 email = "QQgutierrez@gmail.com",
                  lastName = "GUTIERREZ",
-                 name = "Abel Juan",
+                 name = "QUIKO Juan",
                  userID = 0,
-                 //registerDate = DateTime.Now.ToString(),
-                 status = true,
+                 registerDate = DateTime.Now.ToString(),
+                 status = "1",
                  password = "1234"
              };
             JavaScriptSerializer jsx = new JavaScriptSerializer();
             string postdata = jsx.Serialize(objUser);
             byte[] data = Encoding.UTF8.GetBytes(postdata);
             HttpWebRequest req = (HttpWebRequest)WebRequest
-                .Create("http://localhost:3643/Users.svc/Users");
-
+                //.Create("http://localhost:3643/Users.svc/Users");
+                .Create("http://rnld1503-001-site1.btempurl.com/Users.svc/Users");
             req.Method = "POST";
             req.ContentLength = data.Length;
             req.ContentType = "application/json; charset=utf-8";
@@ -107,7 +107,7 @@ namespace slnWcfRestServiceParkingTest
                 name = "Juan juliossss",
                 userID = 22,
                 registerDate = DateTime.Now.ToString(),
-                status = true,
+                status = "1",
                 password = "1234"
             };
             JavaScriptSerializer jsx = new JavaScriptSerializer();

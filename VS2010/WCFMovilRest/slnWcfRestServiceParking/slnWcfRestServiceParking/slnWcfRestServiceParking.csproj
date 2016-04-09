@@ -70,6 +70,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\DocParkingLot.cs" />
     <Compile Include="Dominio\Disctrict.cs" />
     <Compile Include="Dominio\Province.cs" />
     <Compile Include="Dominio\Department.cs" />

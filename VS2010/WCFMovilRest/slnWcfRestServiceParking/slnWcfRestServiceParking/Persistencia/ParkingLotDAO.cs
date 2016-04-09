@@ -33,6 +33,7 @@ namespace slnWcfRestServiceParking.Persistencia
                                      on dt.provinceId equals pr.provinceId
                                      join dp in SQLDC.departments
                                      on pr.departmentId equals dp.departmentId
+                                     where pl.parkingLotID <=15
                                      select new
                                      {
                                          pl.address,

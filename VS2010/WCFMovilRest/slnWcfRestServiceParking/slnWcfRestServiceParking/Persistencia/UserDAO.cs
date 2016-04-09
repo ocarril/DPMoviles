@@ -36,7 +36,7 @@ namespace slnWcfRestServiceParking.Persistencia
                             name = item.name,
                             password = item.password,
                             registerDate = item.registerDate.HasValue ? item.registerDate.Value.ToString() : DateTime.Now.ToString(),
-                            status = item.status,
+                            status = item.status?"1":"0",
                             userID = item.userID
                         };
                     }
@@ -69,7 +69,7 @@ namespace slnWcfRestServiceParking.Persistencia
                             name = item.name,
                             password = item.password,
                             registerDate = item.registerDate.HasValue ? item.registerDate.Value.ToString() : DateTime.Now.ToString(),
-                            status = item.status,
+                            status = item.status ? "1" : "0",
                             userID = item.userID
                         };
                     }

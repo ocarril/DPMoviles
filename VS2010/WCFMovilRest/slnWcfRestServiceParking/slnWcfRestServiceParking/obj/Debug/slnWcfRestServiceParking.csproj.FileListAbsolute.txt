@@ -6,4 +6,3 @@ F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\sl
 F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParking\bin\slnWcfRestServiceParking.pdb
 F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParking\obj\Debug\slnWcfRestServiceParking.dll
 F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParking\obj\Debug\slnWcfRestServiceParking.pdb
-F:\CROMSistemas\VS2012\DPMoviles\VS2010\WCFMovilRest\slnWcfRestServiceParking\slnWcfRestServiceParking\obj\Debug\slnWcfRestServiceParking.csprojResolveAssemblyReference.cache

@@ -43,6 +43,16 @@ namespace slnWcfRestServiceParking
 
         #region /* Tabla : ParkingLot*/
 
+        public DocParkingLot getParkingLotsD()
+        {
+            DocParkingLot objDocParkingLot = new DocParkingLot();
+            objDocParkingLot.lstParkingLot = objParkingLotDAO.getParkingLots();
+            objDocParkingLot.num_found = objDocParkingLot.lstParkingLot.Count;
+            objDocParkingLot.numFound = objDocParkingLot.lstParkingLot.Count;
+            objDocParkingLot.start = 0;
+            return objDocParkingLot;
+        }
+
         public List<ParkingLot> getParkingLots()
         {
             return objParkingLotDAO.getParkingLots();
